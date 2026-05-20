@@ -1,0 +1,143 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "prettier": {
+    "allowed": true
+  },
+  "cli_default_open_behavior": "existing_window",
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "agent": {
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "git_panel": {
+    "dock": "left"
+  },
+  "icon_theme": "Base Charmed Icons",
+  "wsl_connections": [
+    {
+      "distro_name": "Ubuntu",
+      "user": null,
+      "projects": []
+    }
+  ],
+  "vim_mode": false,
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "minimap": {
+    "show": "never"
+  },
+  "buffer_font_family": "CaskaydiaMono Nerd Font",
+  "base_keymap": "VSCode",
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "theme": "One Dark",
+  "tab_bar": {
+    "show": false
+  },
+  "project_panel": {
+    "dock": "left",
+    "hide_root": true,
+    "auto_fold_dirs": false,
+    "starts_open": false,
+    "git_status": false,
+    "scrollbar": {
+      "show": "never"
+    },
+    "indent_guides": {
+      "show": "never"
+    }
+  },
+  "file_finder": {
+    "modal_max_width": "xlarge"
+  },
+  "title_bar": {
+    "show_menus": false,
+    "show_onboarding_banner": false,
+    "show_branch_name": false,
+    "show_user_picture": false,
+    "show_project_items": false,
+    "show_sign_in": false,
+    "show_user_menu": false
+  },
+  "toolbar": {
+    "quick_actions": false
+  },
+  "scrollbar": {
+    "show": "never"
+  },
+  "terminal": {
+    "dock": "right"
+  },
+  "disable_ai": true,
+  "tab_size": 2,
+
+  // LSPs
+  "languages": {
+    "Python": {
+      "tab_size": 4,
+      "formatter": "language_server",
+      "format_on_save": "on"
+    },
+    "JavaScript": {
+      "tab_size": 2,
+      "formatter": {
+        "external": {
+          "command": "prettier",
+          "arguments": ["--stdin-filepath", "{buffer_path}"]
+        }
+      }
+    },
+    "Go": {
+      "tab_size": 2,
+      "language_servers": ["gopls"],
+      "format_on_save": "on",
+      "code_actions_on_save": {
+        "source.organizeImports": true
+      },
+      "formatter": {
+        "external": {
+          "command": "gofumpt",
+          "arguments": ["-w"]
+        }
+      }
+    },
+    "PHP": {
+      "language_servers": ["intelephense", "!phpactor", "!phptools", "..."]
+    }
+  },
+  "lsp": {
+    "gopls": {
+      "settings": {
+        "formatting.gofumpt": true,
+        "ui.completion.usePlaceholders": true
+      }
+    }
+  },
+  "diagnostics": {
+    "button": true,
+    "include_warnings": true,
+    "inline": {
+      "enabled": true,
+      "update_debounce_ms": 150,
+      "padding": 4,
+      "min_column": 0,
+      "max_severity": null
+    },
+    "cargo": null
+  }
+}
